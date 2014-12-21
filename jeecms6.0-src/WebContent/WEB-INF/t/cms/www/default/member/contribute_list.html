@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>投稿列表 - ${site.name} - Powered by JEECMS</title>
+<title>3D模型列表 - ${site.name} - Powered by JEECMS</title>
 <link href="${resSys}/front.css" rel="stylesheet" type="text/css"/>
 <script src="${resSys}/jquery.js" type="text/javascript"></script>
 <script src="${resSys}/front.js" type="text/javascript"></script>
@@ -21,8 +21,8 @@ $(function() {
     <div class="mc_right">
         [#include "member_top.html"/]
         <div class="mr-top-position">
-		     <div class="mr-top-tit fl">稿件列表</div>
-		    <div class="modify fr"><a href="${base}/member/contribute_add.jspx">发布稿件</a></div>
+		     <div class="mr-top-tit fl">3D模型列表</div>
+		    <div class="modify fr"><a href="${base}/member/contribute_add.jspx">发布3D模型</a></div>
 		 </div>
         <div class="mc_content">   
            	<form id="tableForm" action="contribute_list.jspx" method="post">
@@ -76,7 +76,7 @@ $(function() {
             }
             </script>
             [#else]
-                <div>暂无投稿</div>
+                <div>暂无发布的3D模型</div>
             [/#if]
             </form>
     	</div>
