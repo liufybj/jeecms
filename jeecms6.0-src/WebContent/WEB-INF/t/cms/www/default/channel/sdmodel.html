@@ -38,17 +38,27 @@ $(function() {
                 </em>
                 <div class="LanMu01-3"></div>
             </div>
-            <div class="Beauty" style="height: 200px;">
+            <div class="Beauty" style="height: 320px;">
                 <ul>
                     [@cms_content_list typeId='1' count='6' titLen='10' channelOption='1' channelId='77' orderBy='4']
                     [#list tag_list as a]
                     <li>
-                    <a href="${a.url}" title="${a.title}" target="_blank">
-                        <img src="${a.contentImg!site.defImg}" alt="${a.title}" />
-                    </a>
-                    <a href="${a.url}" title="${a.title}" target="_blank">   
-                    <p>[@text_cut s=a.stit len=titLen append=append/]</p>
-                    </a>
+                        <div style="width: 300px;height:300px">
+		                    <a href="${a.url}" title="${a.title}" target="_blank">
+		                        <img src="${a.contentImg!site.defImg}" alt="${a.title}" style="width: 240px;height:240px"/>
+		                    </a>
+		                    <a href="${a.url}" title="${a.title}" target="_blank">   
+		                      <p style="text-align: left;">[@text_cut s=a.stit len=titLen append=append/]</p>
+		                    </a>
+				            <div class="ding" onclick="Cms.up('${base}',${a.id},${a.ups});">
+					            <span id="ups"></span>
+					            <p>顶</p>
+				            </div>
+				            <div class="cai" onclick="Cms.down('${base}',${a.id},${a.downs});">
+					            <span id="downs"></span>
+					            <p>踩</p>
+				            </div>
+			            </div>
                     </li>
                     [/#list]
                     [/@cms_content_list]
